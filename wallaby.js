@@ -24,7 +24,7 @@ module.exports = function (wallaby) {
 
     setup: function (w) {
       if (!global._tsconfigPathsRegistered) {
-        var tsConfigPaths = require('tsconfig-paths');
+        let tsConfigPaths = require('tsconfig-paths');
         tsConfigPaths.register();
         global._tsconfigPathsRegistered = true;
       }
@@ -40,7 +40,7 @@ module.exports = function (wallaby) {
         delete global.asDiagram;
       }
 
-      var path = require('path');
+      let path = require('path');
       require(path.resolve(w.projectCacheDir, 'spec/helpers/setup'));
     },
   };
